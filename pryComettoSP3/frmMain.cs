@@ -12,20 +12,27 @@ namespace pryComettoSP3
 {
     public partial class frmMain : Form
     {
+        //DECLARACION DE VARIABLES GLOBALES (EXCLUSIVAS PARA ESTE FORMULARIO)
         int vContadorTurnos = 0;
         int vModeloMasAntiguo = 0;
         int vCantidadDom6 = 0;
 
+        //Vector - Array 1 Dimension
+        string[] vector = new string[0];
+
+        //Matriz - Array 2 Dimensiones
+        string[,] vector2 = new string[0,0];
         public frmMain()
         {
             InitializeComponent();
         }
-
+        
         private void txtTurno_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+                MessageBox.Show("Solamente números","Error");
             }
         }
 
