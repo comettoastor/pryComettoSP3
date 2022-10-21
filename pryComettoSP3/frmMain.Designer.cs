@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.mrcTurnos = new System.Windows.Forms.GroupBox();
-            this.mrcEstadisticas = new System.Windows.Forms.GroupBox();
-            this.txtTurno = new System.Windows.Forms.TextBox();
+            this.lblTitular = new System.Windows.Forms.Label();
+            this.lblModelo = new System.Windows.Forms.Label();
+            this.lblDominio = new System.Windows.Forms.Label();
+            this.lblTurno = new System.Windows.Forms.Label();
             this.txtTitular = new System.Windows.Forms.TextBox();
-            this.txtDominio = new System.Windows.Forms.TextBox();
             this.numModelo = new System.Windows.Forms.NumericUpDown();
+            this.txtTurno = new System.Windows.Forms.TextBox();
+            this.txtDominio = new System.Windows.Forms.TextBox();
+            this.mrcEstadisticas = new System.Windows.Forms.GroupBox();
+            this.lblModeloAntiguo = new System.Windows.Forms.Label();
+            this.lblCantidadTurnos = new System.Windows.Forms.Label();
             this.txtDominioSeisChars = new System.Windows.Forms.TextBox();
             this.txtModeloAntiguo = new System.Windows.Forms.TextBox();
             this.txtCantidadTurnos = new System.Windows.Forms.TextBox();
+            this.lblDominioSeisChars = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.lblTurno = new System.Windows.Forms.Label();
-            this.lblDominio = new System.Windows.Forms.Label();
-            this.lblModelo = new System.Windows.Forms.Label();
-            this.lblTitular = new System.Windows.Forms.Label();
-            this.lblCantidadTurnos = new System.Windows.Forms.Label();
-            this.lblModeloAntiguo = new System.Windows.Forms.Label();
-            this.lblDominioSeisChars = new System.Windows.Forms.Label();
             this.mrcTurnos.SuspendLayout();
-            this.mrcEstadisticas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numModelo)).BeginInit();
+            this.mrcEstadisticas.SuspendLayout();
             this.SuspendLayout();
             // 
             // mrcTurnos
@@ -69,46 +69,49 @@
             this.mrcTurnos.TabStop = false;
             this.mrcTurnos.Text = "Registro de Turnos";
             // 
-            // mrcEstadisticas
+            // lblTitular
             // 
-            this.mrcEstadisticas.Controls.Add(this.lblModeloAntiguo);
-            this.mrcEstadisticas.Controls.Add(this.lblCantidadTurnos);
-            this.mrcEstadisticas.Controls.Add(this.txtDominioSeisChars);
-            this.mrcEstadisticas.Controls.Add(this.txtModeloAntiguo);
-            this.mrcEstadisticas.Controls.Add(this.txtCantidadTurnos);
-            this.mrcEstadisticas.Controls.Add(this.lblDominioSeisChars);
-            this.mrcEstadisticas.Location = new System.Drawing.Point(12, 200);
-            this.mrcEstadisticas.Name = "mrcEstadisticas";
-            this.mrcEstadisticas.Size = new System.Drawing.Size(479, 120);
-            this.mrcEstadisticas.TabIndex = 1;
-            this.mrcEstadisticas.TabStop = false;
-            this.mrcEstadisticas.Text = "Estadísticas";
+            this.lblTitular.AutoSize = true;
+            this.lblTitular.Location = new System.Drawing.Point(6, 111);
+            this.lblTitular.Name = "lblTitular";
+            this.lblTitular.Size = new System.Drawing.Size(36, 13);
+            this.lblTitular.TabIndex = 8;
+            this.lblTitular.Text = "Titular";
             // 
-            // txtTurno
+            // lblModelo
             // 
-            this.txtTurno.Location = new System.Drawing.Point(111, 19);
-            this.txtTurno.MaxLength = 5;
-            this.txtTurno.Name = "txtTurno";
-            this.txtTurno.Size = new System.Drawing.Size(76, 20);
-            this.txtTurno.TabIndex = 2;
-            this.txtTurno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTurno_KeyPress);
+            this.lblModelo.AutoSize = true;
+            this.lblModelo.Location = new System.Drawing.Point(6, 82);
+            this.lblModelo.Name = "lblModelo";
+            this.lblModelo.Size = new System.Drawing.Size(99, 13);
+            this.lblModelo.TabIndex = 7;
+            this.lblModelo.Text = "Año de Fabricación";
+            // 
+            // lblDominio
+            // 
+            this.lblDominio.AutoSize = true;
+            this.lblDominio.Location = new System.Drawing.Point(6, 53);
+            this.lblDominio.Name = "lblDominio";
+            this.lblDominio.Size = new System.Drawing.Size(45, 13);
+            this.lblDominio.TabIndex = 6;
+            this.lblDominio.Text = "Dominio";
+            // 
+            // lblTurno
+            // 
+            this.lblTurno.AutoSize = true;
+            this.lblTurno.Location = new System.Drawing.Point(6, 22);
+            this.lblTurno.Name = "lblTurno";
+            this.lblTurno.Size = new System.Drawing.Size(90, 13);
+            this.lblTurno.TabIndex = 5;
+            this.lblTurno.Text = "Número de Turno";
             // 
             // txtTitular
             // 
             this.txtTitular.Location = new System.Drawing.Point(111, 108);
+            this.txtTitular.MaxLength = 30;
             this.txtTitular.Name = "txtTitular";
             this.txtTitular.Size = new System.Drawing.Size(280, 20);
             this.txtTitular.TabIndex = 3;
-            // 
-            // txtDominio
-            // 
-            this.txtDominio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDominio.Location = new System.Drawing.Point(111, 50);
-            this.txtDominio.MaxLength = 7;
-            this.txtDominio.Name = "txtDominio";
-            this.txtDominio.Size = new System.Drawing.Size(112, 20);
-            this.txtDominio.TabIndex = 4;
-            this.txtDominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDominio_KeyPress);
             // 
             // numModelo
             // 
@@ -131,6 +134,58 @@
             0,
             0,
             0});
+            // 
+            // txtTurno
+            // 
+            this.txtTurno.Location = new System.Drawing.Point(111, 19);
+            this.txtTurno.MaxLength = 5;
+            this.txtTurno.Name = "txtTurno";
+            this.txtTurno.Size = new System.Drawing.Size(76, 20);
+            this.txtTurno.TabIndex = 2;
+            this.txtTurno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTurno_KeyPress);
+            // 
+            // txtDominio
+            // 
+            this.txtDominio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDominio.Location = new System.Drawing.Point(111, 50);
+            this.txtDominio.MaxLength = 7;
+            this.txtDominio.Name = "txtDominio";
+            this.txtDominio.Size = new System.Drawing.Size(112, 20);
+            this.txtDominio.TabIndex = 4;
+            this.txtDominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDominio_KeyPress);
+            // 
+            // mrcEstadisticas
+            // 
+            this.mrcEstadisticas.Controls.Add(this.lblModeloAntiguo);
+            this.mrcEstadisticas.Controls.Add(this.lblCantidadTurnos);
+            this.mrcEstadisticas.Controls.Add(this.txtDominioSeisChars);
+            this.mrcEstadisticas.Controls.Add(this.txtModeloAntiguo);
+            this.mrcEstadisticas.Controls.Add(this.txtCantidadTurnos);
+            this.mrcEstadisticas.Controls.Add(this.lblDominioSeisChars);
+            this.mrcEstadisticas.Location = new System.Drawing.Point(12, 200);
+            this.mrcEstadisticas.Name = "mrcEstadisticas";
+            this.mrcEstadisticas.Size = new System.Drawing.Size(479, 120);
+            this.mrcEstadisticas.TabIndex = 1;
+            this.mrcEstadisticas.TabStop = false;
+            this.mrcEstadisticas.Text = "Estadísticas";
+            // 
+            // lblModeloAntiguo
+            // 
+            this.lblModeloAntiguo.AutoSize = true;
+            this.lblModeloAntiguo.Location = new System.Drawing.Point(6, 56);
+            this.lblModeloAntiguo.Name = "lblModeloAntiguo";
+            this.lblModeloAntiguo.Size = new System.Drawing.Size(104, 13);
+            this.lblModeloAntiguo.TabIndex = 10;
+            this.lblModeloAntiguo.Text = "Año del más Antiguo";
+            // 
+            // lblCantidadTurnos
+            // 
+            this.lblCantidadTurnos.AutoSize = true;
+            this.lblCantidadTurnos.Location = new System.Drawing.Point(6, 22);
+            this.lblCantidadTurnos.Name = "lblCantidadTurnos";
+            this.lblCantidadTurnos.Size = new System.Drawing.Size(100, 13);
+            this.lblCantidadTurnos.TabIndex = 9;
+            this.lblCantidadTurnos.Text = "Cantidad de Turnos";
             // 
             // txtDominioSeisChars
             // 
@@ -156,6 +211,15 @@
             this.txtCantidadTurnos.Size = new System.Drawing.Size(76, 20);
             this.txtCantidadTurnos.TabIndex = 8;
             // 
+            // lblDominioSeisChars
+            // 
+            this.lblDominioSeisChars.AutoSize = true;
+            this.lblDominioSeisChars.Location = new System.Drawing.Point(6, 90);
+            this.lblDominioSeisChars.Name = "lblDominioSeisChars";
+            this.lblDominioSeisChars.Size = new System.Drawing.Size(189, 13);
+            this.lblDominioSeisChars.TabIndex = 11;
+            this.lblDominioSeisChars.Text = "Cantidad con Dominio de 6 Caracteres";
+            // 
             // btnRegistrar
             // 
             this.btnRegistrar.Location = new System.Drawing.Point(497, 16);
@@ -164,6 +228,7 @@
             this.btnRegistrar.TabIndex = 2;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnConsultar
             // 
@@ -183,69 +248,6 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // lblTurno
-            // 
-            this.lblTurno.AutoSize = true;
-            this.lblTurno.Location = new System.Drawing.Point(6, 22);
-            this.lblTurno.Name = "lblTurno";
-            this.lblTurno.Size = new System.Drawing.Size(90, 13);
-            this.lblTurno.TabIndex = 5;
-            this.lblTurno.Text = "Número de Turno";
-            // 
-            // lblDominio
-            // 
-            this.lblDominio.AutoSize = true;
-            this.lblDominio.Location = new System.Drawing.Point(6, 53);
-            this.lblDominio.Name = "lblDominio";
-            this.lblDominio.Size = new System.Drawing.Size(45, 13);
-            this.lblDominio.TabIndex = 6;
-            this.lblDominio.Text = "Dominio";
-            // 
-            // lblModelo
-            // 
-            this.lblModelo.AutoSize = true;
-            this.lblModelo.Location = new System.Drawing.Point(6, 82);
-            this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(99, 13);
-            this.lblModelo.TabIndex = 7;
-            this.lblModelo.Text = "Año de Fabricación";
-            // 
-            // lblTitular
-            // 
-            this.lblTitular.AutoSize = true;
-            this.lblTitular.Location = new System.Drawing.Point(6, 111);
-            this.lblTitular.Name = "lblTitular";
-            this.lblTitular.Size = new System.Drawing.Size(36, 13);
-            this.lblTitular.TabIndex = 8;
-            this.lblTitular.Text = "Titular";
-            // 
-            // lblCantidadTurnos
-            // 
-            this.lblCantidadTurnos.AutoSize = true;
-            this.lblCantidadTurnos.Location = new System.Drawing.Point(6, 22);
-            this.lblCantidadTurnos.Name = "lblCantidadTurnos";
-            this.lblCantidadTurnos.Size = new System.Drawing.Size(100, 13);
-            this.lblCantidadTurnos.TabIndex = 9;
-            this.lblCantidadTurnos.Text = "Cantidad de Turnos";
-            // 
-            // lblModeloAntiguo
-            // 
-            this.lblModeloAntiguo.AutoSize = true;
-            this.lblModeloAntiguo.Location = new System.Drawing.Point(6, 56);
-            this.lblModeloAntiguo.Name = "lblModeloAntiguo";
-            this.lblModeloAntiguo.Size = new System.Drawing.Size(104, 13);
-            this.lblModeloAntiguo.TabIndex = 10;
-            this.lblModeloAntiguo.Text = "Año del más Antiguo";
-            // 
-            // lblDominioSeisChars
-            // 
-            this.lblDominioSeisChars.AutoSize = true;
-            this.lblDominioSeisChars.Location = new System.Drawing.Point(6, 90);
-            this.lblDominioSeisChars.Name = "lblDominioSeisChars";
-            this.lblDominioSeisChars.Size = new System.Drawing.Size(189, 13);
-            this.lblDominioSeisChars.TabIndex = 11;
-            this.lblDominioSeisChars.Text = "Cantidad con Dominio de 6 Caracteres";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,9 +262,9 @@
             this.Text = "Auto Test";
             this.mrcTurnos.ResumeLayout(false);
             this.mrcTurnos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numModelo)).EndInit();
             this.mrcEstadisticas.ResumeLayout(false);
             this.mrcEstadisticas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numModelo)).EndInit();
             this.ResumeLayout(false);
 
         }
