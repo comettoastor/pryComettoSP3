@@ -50,19 +50,73 @@ namespace pryComettoSP3
             {
                 MessageBox.Show("Datos ingresados correctamente");
                 vContadorTurnos++;
-                if (numModelo.Value < vModeloMasAntiguo || vModeloMasAntiguo == 0)
+                if (nudModelo.Value < vModeloMasAntiguo || vModeloMasAntiguo == 0)
                 {
-                    vModeloMasAntiguo = Convert.ToInt32(numModelo.Value);                
+                    vModeloMasAntiguo = Convert.ToInt32(nudModelo.Value);                
                 }
                 if (txtDominio.Text.Length == 6)
                 {
                     vCantidadDom6++;
                 }
+                LimpiezaInterfaz();
             }
             else
             {
                 MessageBox.Show("Faltan o hay datos ingresados incorrectamente");
             }
+        }
+
+        private void txtTurno_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTurno.Text != "")
+            {
+                lblDominio.Enabled = true;
+                txtDominio.Enabled = true;
+            }
+            else
+            {
+                lblDominio.Enabled = false;
+                txtDominio.Enabled = false;
+            }
+        }
+
+        private void txtDominio_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDominio.Text != "")
+            {
+                lblModelo.Enabled = true;
+                nudModelo.Enabled = true;
+                lblTitular.Enabled = true;
+                txtTitular.Enabled = true;
+            }
+            else
+            {
+                lblModelo.Enabled = false;
+                nudModelo.Enabled = false;
+                lblTitular.Enabled = false;
+                txtTitular.Enabled = false;
+            }
+        }
+
+        private void txtTitular_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTitular.Text != "")
+            {
+                btnRegistrar.Enabled = true;
+            }
+            else
+            {
+                btnRegistrar.Enabled = false;
+            }
+        }
+
+        private void LimpiezaInterfaz()
+        {
+            txtTurno.Clear();
+            txtDominio.Clear();
+            nudModelo.Value = 2022;
+            txtTitular.Clear();
+            txtTurno.Focus();
         }
     }
 }

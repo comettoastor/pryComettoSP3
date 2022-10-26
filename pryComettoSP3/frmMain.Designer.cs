@@ -34,7 +34,7 @@
             this.lblDominio = new System.Windows.Forms.Label();
             this.lblTurno = new System.Windows.Forms.Label();
             this.txtTitular = new System.Windows.Forms.TextBox();
-            this.numModelo = new System.Windows.Forms.NumericUpDown();
+            this.nudModelo = new System.Windows.Forms.NumericUpDown();
             this.txtTurno = new System.Windows.Forms.TextBox();
             this.txtDominio = new System.Windows.Forms.TextBox();
             this.mrcEstadisticas = new System.Windows.Forms.GroupBox();
@@ -48,7 +48,7 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.mrcTurnos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numModelo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudModelo)).BeginInit();
             this.mrcEstadisticas.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             this.mrcTurnos.Controls.Add(this.lblDominio);
             this.mrcTurnos.Controls.Add(this.lblTurno);
             this.mrcTurnos.Controls.Add(this.txtTitular);
-            this.mrcTurnos.Controls.Add(this.numModelo);
+            this.mrcTurnos.Controls.Add(this.nudModelo);
             this.mrcTurnos.Controls.Add(this.txtTurno);
             this.mrcTurnos.Controls.Add(this.txtDominio);
             this.mrcTurnos.Location = new System.Drawing.Point(12, 12);
@@ -72,6 +72,7 @@
             // lblTitular
             // 
             this.lblTitular.AutoSize = true;
+            this.lblTitular.Enabled = false;
             this.lblTitular.Location = new System.Drawing.Point(6, 111);
             this.lblTitular.Name = "lblTitular";
             this.lblTitular.Size = new System.Drawing.Size(36, 13);
@@ -81,6 +82,7 @@
             // lblModelo
             // 
             this.lblModelo.AutoSize = true;
+            this.lblModelo.Enabled = false;
             this.lblModelo.Location = new System.Drawing.Point(6, 82);
             this.lblModelo.Name = "lblModelo";
             this.lblModelo.Size = new System.Drawing.Size(99, 13);
@@ -90,6 +92,7 @@
             // lblDominio
             // 
             this.lblDominio.AutoSize = true;
+            this.lblDominio.Enabled = false;
             this.lblDominio.Location = new System.Drawing.Point(6, 53);
             this.lblDominio.Name = "lblDominio";
             this.lblDominio.Size = new System.Drawing.Size(45, 13);
@@ -107,29 +110,32 @@
             // 
             // txtTitular
             // 
+            this.txtTitular.Enabled = false;
             this.txtTitular.Location = new System.Drawing.Point(111, 108);
             this.txtTitular.MaxLength = 30;
             this.txtTitular.Name = "txtTitular";
             this.txtTitular.Size = new System.Drawing.Size(280, 20);
             this.txtTitular.TabIndex = 3;
+            this.txtTitular.TextChanged += new System.EventHandler(this.txtTitular_TextChanged);
             // 
-            // numModelo
+            // nudModelo
             // 
-            this.numModelo.Location = new System.Drawing.Point(111, 80);
-            this.numModelo.Maximum = new decimal(new int[] {
+            this.nudModelo.Enabled = false;
+            this.nudModelo.Location = new System.Drawing.Point(111, 80);
+            this.nudModelo.Maximum = new decimal(new int[] {
             2022,
             0,
             0,
             0});
-            this.numModelo.Minimum = new decimal(new int[] {
+            this.nudModelo.Minimum = new decimal(new int[] {
             1950,
             0,
             0,
             0});
-            this.numModelo.Name = "numModelo";
-            this.numModelo.Size = new System.Drawing.Size(49, 20);
-            this.numModelo.TabIndex = 5;
-            this.numModelo.Value = new decimal(new int[] {
+            this.nudModelo.Name = "nudModelo";
+            this.nudModelo.Size = new System.Drawing.Size(49, 20);
+            this.nudModelo.TabIndex = 5;
+            this.nudModelo.Value = new decimal(new int[] {
             2022,
             0,
             0,
@@ -142,16 +148,19 @@
             this.txtTurno.Name = "txtTurno";
             this.txtTurno.Size = new System.Drawing.Size(76, 20);
             this.txtTurno.TabIndex = 2;
+            this.txtTurno.TextChanged += new System.EventHandler(this.txtTurno_TextChanged);
             this.txtTurno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTurno_KeyPress);
             // 
             // txtDominio
             // 
             this.txtDominio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDominio.Enabled = false;
             this.txtDominio.Location = new System.Drawing.Point(111, 50);
             this.txtDominio.MaxLength = 7;
             this.txtDominio.Name = "txtDominio";
             this.txtDominio.Size = new System.Drawing.Size(112, 20);
             this.txtDominio.TabIndex = 4;
+            this.txtDominio.TextChanged += new System.EventHandler(this.txtDominio_TextChanged);
             this.txtDominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDominio_KeyPress);
             // 
             // mrcEstadisticas
@@ -222,6 +231,7 @@
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.Enabled = false;
             this.btnRegistrar.Location = new System.Drawing.Point(497, 16);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(108, 35);
@@ -262,7 +272,7 @@
             this.Text = "Auto Test";
             this.mrcTurnos.ResumeLayout(false);
             this.mrcTurnos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numModelo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudModelo)).EndInit();
             this.mrcEstadisticas.ResumeLayout(false);
             this.mrcEstadisticas.PerformLayout();
             this.ResumeLayout(false);
@@ -277,7 +287,7 @@
         private System.Windows.Forms.Label lblDominio;
         private System.Windows.Forms.Label lblTurno;
         private System.Windows.Forms.TextBox txtTitular;
-        private System.Windows.Forms.NumericUpDown numModelo;
+        private System.Windows.Forms.NumericUpDown nudModelo;
         private System.Windows.Forms.TextBox txtTurno;
         private System.Windows.Forms.TextBox txtDominio;
         private System.Windows.Forms.GroupBox mrcEstadisticas;
