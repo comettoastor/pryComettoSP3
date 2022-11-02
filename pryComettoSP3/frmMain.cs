@@ -118,5 +118,12 @@ namespace pryComettoSP3
             txtTitular.Clear();
             txtTurno.Focus();
         }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            txtCantidadTurnos.Text = vContadorTurnos.ToString();
+            txtModeloAntiguo.Text = vModeloMasAntiguo.ToString();
+            txtDominioSeisChars.Text = vCantidadDom6.ToString();
+        }
     }
 }
