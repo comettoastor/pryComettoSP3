@@ -125,5 +125,10 @@ namespace pryComettoSP3
             txtModeloAntiguo.Text = vModeloMasAntiguo.ToString();
             txtDominioSeisChars.Text = vCantidadDom6.ToString();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
