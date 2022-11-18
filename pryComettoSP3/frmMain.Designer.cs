@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.mrcTurnos = new System.Windows.Forms.GroupBox();
             this.lblTitular = new System.Windows.Forms.Label();
             this.lblModelo = new System.Windows.Forms.Label();
@@ -270,6 +271,7 @@
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.mrcEstadisticas);
             this.Controls.Add(this.mrcTurnos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.Text = "Auto Test";
             this.mrcTurnos.ResumeLayout(false);
